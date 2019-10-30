@@ -8,15 +8,10 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class HeaderComponent {
 
 
-  @Output() recipesPageEvent = new EventEmitter<string>();
-  @Output() shoppingListPageEvent = new EventEmitter<string>();
+  @Output() pageEvent = new EventEmitter<string>();
 
-  onOpenRecipesPage() {
-    this.recipesPageEvent.emit('Recipes');
+  onSelectPage(page: string) {
+    this.pageEvent.emit(page);
 }
-
-  onOpenShoppingListPage() {
-    this.shoppingListPageEvent.emit('Shopping List');
-  }
 
 }

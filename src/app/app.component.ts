@@ -7,8 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class AppComponent {
 
-  pageString;
-
+  pageString = 'Recipes';
 
   openPage(data) {
     this.pageString = data;
